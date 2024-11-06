@@ -57,7 +57,13 @@ a {
     overflow-x: hidden;
     overflow-y: hidden;
 
+    background-image: url('/assets/img/bgbg.png');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 80%;
+
     @media(max-width: 960px) {
+        background-image: none;
         flex-direction: column;
         overflow-y: visible;
     }
@@ -83,7 +89,10 @@ a {
         top: -63%;
         left: 110%;
 
-        @media(max-width: 960px) {}
+        @media(max-width: 960px) {
+            top: -20%;
+            left: 10%;
+        }
     }
 
     .hero_profile_img_bg-scale2 {
@@ -93,7 +102,10 @@ a {
         top: 35%;
         left: 0%;
 
-        @media(max-width: 960px) {}
+        @media(max-width: 960px) {
+            top: 70%;
+            left: -2%;
+        }
     }
 
     .hero_profile {
@@ -200,6 +212,7 @@ a {
             color: #A4A5A6;
             width: 75%;
 
+
             @media(max-width: 960px) {
                 width: 95%;
                 text-align: center;
@@ -220,4 +233,74 @@ a {
         }
     }
 
+}
+
+
+/************************portfolio**********************/
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+
+
+    .h2_img-portfolio {
+        position: relative;
+        overflow: hidden;
+        height: 48px;
+        margin-bottom: 50px;
+
+        @media(max-width: 960px) {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .h2_img {
+            top: 0;
+            left: 0;
+            width: 250px;
+        }
+
+        .h2_img2 {
+            position: absolute;
+            z-index: -1;
+            width: 600px;
+            height: 400px;
+            left: -70%;
+            top: -70px;
+        }
+
+        @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotating {
+            animation: rotating 40s linear infinite;
+        }
+    }
+
+    .portfolio_items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .portfolio_item {
+            position: relative;
+            width: 100%;
+
+            .portfolio_item_border {}
+
+            .portfolio_item_img {
+                width: 100%;
+            }
+
+        }
+    }
 }
